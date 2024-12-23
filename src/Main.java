@@ -1,5 +1,6 @@
-import Models.School;
-import Models.Student;
+import models.School;
+import models.Student;
+import models.Teacher;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -20,6 +21,8 @@ public class Main {
             int years = sc.nextInt();
             int salary = sc.nextInt();
             var teacher = new Teacher(name,surname,age,gender,course,years,salary);
+            if(teacher.getYearsOfExperience()>10)
+                teacher.giveRaise(10);
             school.addMember(teacher);
         }
 

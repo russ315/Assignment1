@@ -1,4 +1,4 @@
-import Models.Person;
+package models;
 
 public class Teacher extends Person {
     private String subject;
@@ -8,7 +8,9 @@ public class Teacher extends Person {
     public int getSalary() {
         return salary;
     }
-
+    public int getYearsOfExperience() {
+        return yearsOfExperience;
+    }
     public Teacher(String name, String surname, int age, String gender, String subject, int yearsOfExperience, int salary) {
         super(name,surname,age,gender);
         this.subject = subject;

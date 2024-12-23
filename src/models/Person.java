@@ -1,4 +1,4 @@
-package Models;
+package models;
 
 public class Person {
     private String name;
@@ -9,11 +9,11 @@ public class Person {
         return surname.compareTo(other.surname);
     }
 
-    public Person(String name, String surname, int age, String gender){
-        this.name=name;
-        this.surname=surname;
-        this.age=age;
-        this.gender=gender;
+    public Person(String name, String surname, int age, String gender) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.gender = gender;
     }
 
     @Override
