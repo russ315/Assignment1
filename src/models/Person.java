@@ -4,7 +4,7 @@ public class Person {
     private String name;
     private String surname;
     private int age;
-    private String gender;
+    private boolean gender;
     int compareTo(Person other){
         return surname.compareTo(other.surname);
     }
@@ -13,12 +13,21 @@ public class Person {
         this.name = name;
         this.surname = surname;
         this.age = age;
-        this.gender = gender;
+        setGender(gender);
     }
+
+    private void setGender(String gender) {
+        if(gender.toLowerCase() == "male")
+            this.gender = true;
+        else
+            this.gender = false;
+    }
+
 
     @Override
     public String toString() {
-        return "Hi,I am "+name+" "+surname+",a "+age+"-year-old "+ gender;
+        String genderStr = gender ? "male" : "female";
+        return "Hi,I am "+name+" "+surname+",a "+age+"-year-old "+ genderStr;
 
     }
 }
